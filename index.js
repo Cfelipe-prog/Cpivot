@@ -15,6 +15,7 @@ function handler (req, res) { //create server
   });
   sensor.read(11, 4, function(err, temperature, humidity) {
 	if (!err) {
+	  const block = document.getElementById('id');
 	  console.log(`temp: ${temperature}°C, humidity: ${humidity}%`);
 	}
   });
